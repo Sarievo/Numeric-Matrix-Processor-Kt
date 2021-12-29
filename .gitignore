@@ -1,0 +1,4 @@
+# Project exclude paths
+/.gradle/
+/Topics/Processing strings/Move the first N characters/out/
+/Topics/Processing strings/Move the first N characters/out/production/classes/
