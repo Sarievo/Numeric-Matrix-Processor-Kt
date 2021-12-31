@@ -1,0 +1,19 @@
+type: code
+files:
+- name: src/Main.kt
+  visible: true
+  text: |-
+    class ListUtils {
+        companion object Info {
+
+            // define info method here
+
+        }
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/16057#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Fri, 31 Dec 2021 03:07:27 UTC
+record: -1

@@ -5,21 +5,26 @@
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="delegatedBuild" value="false" />
+        <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Numeric Matrix Processor/task" />
             <option value="$PROJECT_DIR$/Topics/Function references/Ascending and descending sorting" />
             <option value="$PROJECT_DIR$/Topics/Function references/Creating employees" />
             <option value="$PROJECT_DIR$/Topics/Function references/Getting fields of classes" />
             <option value="$PROJECT_DIR$/Topics/Function references/Kinds of function references" />
             <option value="$PROJECT_DIR$/Topics/Function references/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Generic functions/Extracting info" />
+            <option value="$PROJECT_DIR$/Topics/Generic functions/Theory" />
             <option value="$PROJECT_DIR$/Topics/Inheritance and constructors/Derived class creation" />
             <option value="$PROJECT_DIR$/Topics/Inheritance and constructors/Theory" />
             <option value="$PROJECT_DIR$/Topics/Processing strings/Compression algorithm" />
             <option value="$PROJECT_DIR$/Topics/Processing strings/Convert a date" />
             <option value="$PROJECT_DIR$/Topics/Processing strings/Create an euphonious word" />
+            <option value="$PROJECT_DIR$/Topics/Processing strings/Cutting out the middle of a string" />
             <option value="$PROJECT_DIR$/Topics/Processing strings/Determine the output" />
             <option value="$PROJECT_DIR$/Topics/Processing strings/Determine the value" />
             <option value="$PROJECT_DIR$/Topics/Processing strings/Determine the value (1)" />

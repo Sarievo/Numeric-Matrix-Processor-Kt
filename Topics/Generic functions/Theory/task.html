@@ -1,0 +1,70 @@
+<h2>Generic functions</h2>
+<html>
+ <head></head>
+ <body>
+  <p>Previously, we talked about classes named <strong>generic</strong>, which can have type parameters, and learned how we can use these classes. However, not only classes can be generic – there are generic functions, too. Type parameters can be passed to the function or be defined as its return type. <strong>Generic functions</strong> can be declared on their own or be class members of a class, no matter generic or non-generic.</p> 
+  <p>Generic functions are used in algorithms which do not depend on the types they operate on. For example, searching through an array does not depend on the type of values the array stores. That is why there is no need to declare several realizations of the same algorithm for different types.</p> 
+  <p>Let's take a closer look at generic functions now!</p> 
+  <h5>Declaring generic functions</h5> 
+  <p>The following function is declared as generic and does not belong to any class.</p> 
+  <pre><code class="language-kotlin">fun &lt;T&gt; doSomething(t: T): T {
+    return t
+}</code></pre> 
+  <p>Here we can see that the type parameter <code class="language-kotlin">T</code> is passed to the function and declares its return type. Note that we need to specify the type parameter <code class="language-kotlin">T</code> both inside parentheses and angle brackets.</p> 
+  <p>Generic functions can also take or return values of non-generic types. Take a look at a function which calculates the length of a list:</p> 
+  <pre><code class="language-kotlin">fun &lt;T&gt; calculateLength(list: List&lt;T&gt;): Int {
+    return list.size
+}</code></pre> 
+  <p>Let's pass a list of strings to this function:</p> 
+  <pre><code class="language-kotlin">var list = listOf("hello", "from", "hyperskill")
+ println(calculateLength&lt;String&gt;(list)) // 3</code></pre> 
+  <p>To call a generic function, we need to specify the type arguments in angle brackets right after the name of the function. However, if the type parameters of a function can be inferred from the context (for example, if we use standard types), they can be omitted. So, we can rewrite the last line from the above example as follows:</p> 
+  <pre><code class="language-kotlin">println(calculateLength(list)) // 3</code></pre> 
+  <p>Just like generic classes, generic functions can have several type parameters. They are separated by commas inside angle brackets:</p> 
+  <pre><code class="language-kotlin">fun &lt;T,U&gt; multipleDoSomething(t: T, u:U){
+   // do something
+}</code></pre> 
+  <h5>Generic methods</h5> 
+  <p>As we said, generic functions can be members of classes. They can operate with other members of a class just like ordinary class methods. Let's take a look at an example with a non-generic class:</p> 
+  <pre><code class="language-kotlin">class NonGenericClass {
+    fun &lt;T&gt; someGenericMethod(t: T): T {
+        //...//
+        return t
+    }
+}</code></pre> 
+  <p>We declared a class named <code class="language-kotlin">NonGenericClass</code> with a generic method <code class="language-kotlin">someGenericMethod()</code>. The type parameter <code class="language-kotlin">T</code> is the type of the single argument and the return type. Let's create an instance of this class, invoke the method, and see what happens.</p> 
+  <pre><code class="language-kotlin">fun main() {
+    var item = NonGenericClass();
+    var value = item.someGenericMethod("Hello!")
+    println(value)// Hello!
+}</code></pre> 
+  <p>We invoke the method from the instance and it returns a value that has the same type as the value that was passed in. Note that here we don't need to specify type arguments because we have a standard type String.</p> 
+  <p>More often, generic methods belong to classes that are also generic. Take a look at the example below:</p> 
+  <pre><code class="language-kotlin">class GenericClass&lt;T&gt; {
+    fun &lt;U&gt; someGenericMethod(t: T, u: U): T {
+        //...//
+        return t
+    }
+}</code></pre> 
+  <p>This method receives arguments of the class's type <code class="language-kotlin">T</code> and the method's own type <code class="language-kotlin">U</code>. The class has been already declared in the class header, so we do not need to declare it again in the method.</p> 
+  <h5>Extension functions</h5> 
+  <p>Kotlin provides the ability to extend existing classes without inheritance or using design patterns. You can use <strong>extension functions</strong>, which allow adding some functionality to a class while not being a member of it. </p> 
+  <pre><code class="language-kotlin">class BiggerBox&lt;T&gt;(var value1: T, var value2: T) {}
+
+fun &lt;T&gt; BiggerBox&lt;T&gt;.changeBoxes() {
+    val tmp = this.value1
+    this.value1 = this.value2
+    this.value2 = tmp
+}
+
+fun main() {
+    var box = BiggerBox("hyperskill", "kotlin")
+    println("${box.value1} and ${box.value2}")// hyperskill and kotlin
+    box.changeBoxes()
+    println("${box.value1} and ${box.value2}")// kotlin and hyperskill
+}</code></pre> 
+  <p>We have a generic class <code class="language-kotlin">BiggerBox</code>, which stores two values of the same type <code class="language-kotlin">T</code>. Also, we have an extension generic function, which swaps the two values. As you can see, <code class="language-kotlin">changeBoxes()</code> is not a member of the class and it can be invoked from an instance. Such approach is useful when we should not or even cannot modify the existing class written, for example, by another developer.</p> 
+  <h5>Conclusion</h5> 
+  <p>Generic functions are used for the same reason as generic classes – they improve code usability. Generic functions can be declared inside classes (both generic and non-generic) or exist on their own. Generic methods are used like non-generic; you need to specify type parameters inside angle brackets. Generic extension functions can optimize your code and add some functionality to a generic class without modifying it.</p>
+ </body>
+</html>

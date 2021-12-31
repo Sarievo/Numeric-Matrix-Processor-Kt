@@ -1,6 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel target="11" />
+    <bytecodeTargetLevel target="17">
+      <module name="Numeric_Matrix_Processor.Numeric_Matrix_Processor-task.main" target="11" />
+      <module name="Numeric_Matrix_Processor.Topics-Function_references-Ascending_and_descending_sorting.main" target="11" />
+      <module name="Numeric_Matrix_Processor.Topics-Function_references-Creating_employees.main" target="11" />
+      <module name="Numeric_Matrix_Processor.Topics-Function_references-Getting_fields_of_classes.main" target="11" />
+      <module name="Numeric_Matrix_Processor.Topics-Function_references-Kinds_of_function_references.main" target="11" />
+      <module name="Numeric_Matrix_Processor.Topics-Function_references-Theory.main" target="11" />
+      <module name="Numeric_Matrix_Processor.Topics-Generic_functions-Extracting_info.main" target="11" />
+      <module name="Numeric_Matrix_Processor.Topics-Generic_functions-Theory.main" target="11" />
+      <module name="Numeric_Matrix_Processor.Topics-Inheritance_and_constructors-Derived_class_creation.main" target="11" />
+      <module name="Numeric_Matrix_Processor.Topics-Inheritance_and_constructors-Theory.main" target="11" />
+      <module name="Numeric_Matrix_Processor.Topics-Processing_strings-Compression_algorithm.main" target="11" />
+      <module name="Numeric_Matrix_Processor.Topics-Processing_strings-Convert_a_date.main" target="11" />
+      <module name="Numeric_Matrix_Processor.Topics-Processing_strings-Create_an_euphonious_word.main" target="11" />
+      <module name="Numeric_Matrix_Processor.Topics-Processing_strings-Cutting_out_the_middle_of_a_string.main" target="11" />
+      <module name="Numeric_Matrix_Processor.Topics-Processing_strings-Determine_the_output.main" target="11" />
+      <module name="Numeric_Matrix_Processor.Topics-Processing_strings-Determine_the_value.main" target="11" />
+      <module name="Numeric_Matrix_Processor.Topics-Processing_strings-Determine_the_value__1_.main" target="11" />
+      <module name="Numeric_Matrix_Processor.Topics-Processing_strings-Double_characters.main" target="11" />
+      <module name="Numeric_Matrix_Processor.Topics-Processing_strings-Move_the_first_N_characters.main" target="11" />
+      <module name="Numeric_Matrix_Processor.Topics-Processing_strings-Number_of_occurrences.main" target="11" />
+      <module name="Numeric_Matrix_Processor.Topics-Processing_strings-The_longest_word.main" target="11" />
+      <module name="Numeric_Matrix_Processor.Topics-Processing_strings-The_lucky_ticket.main" target="11" />
+      <module name="Numeric_Matrix_Processor.Topics-Processing_strings-Theory.main" target="11" />
+      <module name="Numeric_Matrix_Processor.Topics-Type_aliases-Openning_boxes.main" target="11" />
+      <module name="Numeric_Matrix_Processor.Topics-Type_aliases-Theory.main" target="11" />
+      <module name="Numeric_Matrix_Processor.util.main" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>
