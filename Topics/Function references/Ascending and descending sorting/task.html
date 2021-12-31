@@ -1,0 +1,14 @@
+<h2>Ascending and descending sorting</h2>
+<html>
+ <head></head>
+ <body>
+  <p>It is always nice to have one function that can sort lists both in ascending and descending order. Here is such a sorting function based on the bubble sorting algorithm. It takes exactly two parameters: a list and <strong>a comparison function</strong>.</p> 
+  <p>You need to create an object that represents a comparison function and assign it to the <code class="java">comparator</code> variable. The comparison function should take 2 parameters and return the lesser one if the sorting order is ascending and the larger one if the order is descending.<br> <br> Use the <code class="java">isAscending</code> variable to determine the sorting order. If the variable is <code class="java">true</code>, then you need to sort the list in ascending order; otherwise, in descending order.</p> 
+  <p>It is highly recommended to use function references to solve this task. There are several ways to do it, and you can choose any of them. But if it is difficult for you, you can use lambda expressions as well.</p> 
+  <p></p>
+  <div class="alert alert-primary">
+   By the way, the bubble sorting algorithm is not an efficient function for sorting datasets; here it is just an educational example of how to pass functions to functions.
+  </div>
+  <p></p>
+ </body>
+</html><br><b>Sample Input:</b><br><pre><code class="language-no-highlight">ascending<br>3 5 2 1 4</code></pre><br><b>Sample Output:</b><br><pre><code class="language-no-highlight">1 2 3 4 5</code></pre><br><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 8 seconds</font><br><br>

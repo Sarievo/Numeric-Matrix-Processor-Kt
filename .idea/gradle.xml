@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
@@ -9,6 +10,13 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Topics/Function references/Ascending and descending sorting" />
+            <option value="$PROJECT_DIR$/Topics/Function references/Creating employees" />
+            <option value="$PROJECT_DIR$/Topics/Function references/Getting fields of classes" />
+            <option value="$PROJECT_DIR$/Topics/Function references/Kinds of function references" />
+            <option value="$PROJECT_DIR$/Topics/Function references/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Inheritance and constructors/Derived class creation" />
+            <option value="$PROJECT_DIR$/Topics/Inheritance and constructors/Theory" />
             <option value="$PROJECT_DIR$/Topics/Processing strings/Compression algorithm" />
             <option value="$PROJECT_DIR$/Topics/Processing strings/Convert a date" />
             <option value="$PROJECT_DIR$/Topics/Processing strings/Create an euphonious word" />
@@ -21,6 +29,8 @@
             <option value="$PROJECT_DIR$/Topics/Processing strings/The longest word" />
             <option value="$PROJECT_DIR$/Topics/Processing strings/The lucky ticket" />
             <option value="$PROJECT_DIR$/Topics/Processing strings/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Type aliases/Openning boxes" />
+            <option value="$PROJECT_DIR$/Topics/Type aliases/Theory" />
             <option value="$PROJECT_DIR$/util" />
           </set>
         </option>

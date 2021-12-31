@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":Topics-Function_references-Getting_fields_of_classes" external.linked.project.path="$MODULE_DIR$/../../../../../Topics/Function references/Getting fields of classes" external.root.project.path="$MODULE_DIR$/../../../../.." external.system.id="GRADLE" external.system.module.group="Numeric_Matrix_Processor" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../../../Topics/Function references/Getting fields of classes">
+      <excludeFolder url="file://$MODULE_DIR$/../../../../../Topics/Function references/Getting fields of classes/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../../../Topics/Function references/Getting fields of classes/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../../../Topics/Function references/Getting fields of classes/out" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

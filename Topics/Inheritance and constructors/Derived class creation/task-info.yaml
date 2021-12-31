@@ -1,0 +1,15 @@
+type: code
+files:
+- name: src/Main.kt
+  visible: true
+  text: |-
+    class Programmer : Employee {
+    // Write your code here
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/15622#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Fri, 31 Dec 2021 00:57:00 UTC
+record: -1

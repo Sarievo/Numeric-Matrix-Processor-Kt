@@ -1,0 +1,23 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: MagicClass::new
+- text: ::MagicClass
+- text: instance::magicFun
+- text: MagicClass::magic
+- text: MagicClass::magicFun
+message_correct: Congratulations!
+message_incorrect: Incorrect solution
+files:
+- name: src/Main.kt
+  visible: true
+  text: |
+    // You can experiment here, it won’t be checked
+
+    fun main(args: Array<String>) {
+      // put your code here
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/15422#comment
+status: Solved
+record: -1
