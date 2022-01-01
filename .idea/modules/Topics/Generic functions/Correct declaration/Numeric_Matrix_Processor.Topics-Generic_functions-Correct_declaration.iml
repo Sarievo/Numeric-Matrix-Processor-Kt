@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":Topics-Generic_functions-Correct_declaration" external.linked.project.path="$MODULE_DIR$/../../../../../Topics/Generic functions/Correct declaration" external.root.project.path="$MODULE_DIR$/../../../../.." external.system.id="GRADLE" external.system.module.group="Numeric Matrix Processor" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../../../Topics/Generic functions/Correct declaration">
+      <excludeFolder url="file://$MODULE_DIR$/../../../../../Topics/Generic functions/Correct declaration/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../../../Topics/Generic functions/Correct declaration/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../../../Topics/Generic functions/Correct declaration/out" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

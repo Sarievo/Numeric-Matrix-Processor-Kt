@@ -29,8 +29,29 @@ operator fun Array<DoubleArray>.plus(other: Array<DoubleArray>): Array<DoubleArr
     assert(this.size == other.size && this[0].size == other[0].size)
     val raw = this.clone()
     for (i in raw.indices) {
-        for (j in this[0].indices) {
-            this[i][j] += other[i][j]
+        for (j in raw[0].indices) {
+            raw[i][j] += other[i][j]
+        }
+    }
+    return raw
+}
+
+operator fun Array<DoubleArray>.minus(other: Array<DoubleArray>): Array<DoubleArray> {
+    assert(this.size == other.size && this[0].size == other[0].size)
+    val raw = this.clone()
+    for (i in raw.indices) {
+        for (j in raw[0].indices) {
+            raw[i][j] -= other[i][j]
+        }
+    }
+    return raw
+}
+
+operator fun Array<DoubleArray>.times(c: Double): Array<DoubleArray> {
+    val raw = this.clone()
+    for (i in raw.indices) {
+        for (j in raw[0].indices) {
+            raw[i][j] *= c
         }
     }
     return raw
@@ -38,7 +59,8 @@ operator fun Array<DoubleArray>.plus(other: Array<DoubleArray>): Array<DoubleArr
 
 fun main() {
     try {
-        (readMatrix() + readMatrix()).print()
+//        (readMatrix() + readMatrix()).print()
+        (readMatrix() * s.nextInt().toDouble()).print()
     } catch (e: AssertionError) {
         println(errMsg[0])
     }

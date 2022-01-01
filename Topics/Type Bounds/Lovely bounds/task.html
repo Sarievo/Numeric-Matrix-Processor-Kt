@@ -1,0 +1,23 @@
+<h2>Lovely bounds</h2>
+<html>
+ <head></head>
+ <body>
+  <p>Take a look at the code snippet below:</p> 
+  <pre><code class="language-kotlin">fun main() {
+    var cat = Cat("Kitty")
+    var book = Book("Harry Potter")
+    printTypeBound(cat)
+    printTypeBound(book)
+}
+
+fun &lt;T : Animal&gt; printTypeBound(item: T) {
+    println(item.name)
+}
+
+
+open class Animal(var name: String)
+class Cat(name: String) : Animal(name)
+class Book(name: String)</code></pre> 
+  <p> What will be the result of its compilation and execution? Choose the right answer.</p>
+ </body>
+</html>

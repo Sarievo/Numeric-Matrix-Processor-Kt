@@ -4,3 +4,5 @@ content:
 - Inheritance and constructors
 - Type aliases
 - Generic functions
+- Generics and Any
+- Type Bounds

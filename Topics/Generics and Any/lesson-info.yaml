@@ -1,0 +1,8 @@
+content:
+- Theory
+- Reusing code with Object
+- Why generics
+- Instance without type argument
+- What is wrong
+- Correct the usage of a non-generic class
+- Initialize an object of a generic class

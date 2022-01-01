@@ -1,0 +1,15 @@
+<h2>Instance without type argument</h2>
+<html>
+ <head></head>
+ <body>
+  <p>Consider the following generic class:</p> 
+  <pre><code class="language-kotlin">class MyClass&lt;T&gt;(val t: T) {
+
+    fun get(): T {
+        return t
+    }
+}</code></pre> 
+  <p>What will happen if you create an instance without specifying the type argument?</p> 
+  <pre><code class="language-kotlin">val instance = MyClass("Hello!")</code></pre>
+ </body>
+</html>

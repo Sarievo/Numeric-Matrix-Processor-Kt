@@ -1,0 +1,14 @@
+type: code
+custom_name: Get bigger!
+files:
+- name: src/Main.kt
+  visible: true
+  text: |-
+    // finish it!
+    fun <T> getBigger(a: T, b: T): T {
+
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/16942#comment
+status: Solved
+record: -1

@@ -1,0 +1,22 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: 'val obj: Any = instance.get()'
+- text: 'val str: String = instance.get()'
+- text: 'val num: Int = instance.get() as Int'
+- text: 'val str: String = instance.get() as String'
+message_correct: Congratulations!
+message_incorrect: Incorrect solution
+files:
+- name: src/Main.kt
+  visible: true
+  text: |
+    // You can experiment here, it won’t be checked
+
+    fun main(args: Array<String>) {
+      // put your code here
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/15349#comment
+status: Solved
+record: -1

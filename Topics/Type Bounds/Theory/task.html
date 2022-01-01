@@ -1,0 +1,52 @@
+<h2>Type Bounds</h2>
+<html>
+ <head></head>
+ <body>
+  <p>Previously, we have seen that generics can accept any type of parameters and make code reusable. Let's get familiar with another aspect of generics now. Sometimes we need to restrict the type parameter inside a generic function or class. For example, we have a generic class <code class="language-kotlin">Storage&lt;T&gt;</code> and we want to make it store only books without creating one more class. In such a situation, we should use <strong>type bounds</strong>.</p> 
+  <h5>Usage with classes</h5> 
+  <p>We have mentioned a generic class named <code class="language-kotlin">Storage&lt;T&gt;</code> above. Let's take a look at its code:</p> 
+  <pre><code class="language-kotlin">class Storage&lt;T&gt;() {
+      // some code
+}</code></pre> 
+  <p>Before, we wanted to save only books inside this storage. But a "book" is quite a wide concept – it can include magazines, brochures, etc. We can add our limitation by adding a constraint <code class="language-kotlin">T : Book</code> inside angle brackets:</p> 
+  <pre><code class="language-kotlin">class Storage&lt;T : Book&gt;() {
+      // some code
+}</code></pre> 
+  <p>Then we create the classes whose objects we want to store:</p> 
+  <pre><code class="language-kotlin">open class Book {}
+class Magazine : Book() {}
+class Stone {}</code></pre> 
+  <p>We've created three classes: <code class="language-kotlin">Book</code>, <code class="language-kotlin">Magazine</code>, and <code class="language-kotlin">Stone</code>, and, as you can see, <code class="language-kotlin">Magazine</code> inherits <code class="language-kotlin">Book</code>. Now let's create instances of <code class="language-kotlin">Storage&lt;T&gt;</code>:</p> 
+  <pre><code class="language-kotlin">val storage1 = Storage&lt;Book&gt;()
+val storage2 = Storage&lt;Magazine&gt;()
+val storage3 = Storage&lt;Stone&gt;() // compile-time error</code></pre> 
+  <p>The first two lines will compile without problems. The third one, however, will return an error: <code class="language-kotlin">Type parameter 'Stone' is not within its bounds</code>. Since this is a compile-time error, we catch this problem before it can appear in a real application. This makes type bounds safe to use. </p> 
+  <p>By default, all type parameters are constrained by the type <code class="language-kotlin">Any?</code>. The definition of any generic class, for example, <code class="language-kotlin">SomeGeneric&lt;T&gt;</code> is the same as <code class="language-kotlin">SomeGeneric&lt;T : Any?&gt;</code>.</p> 
+  <p></p>
+  <div class="alert alert-primary">
+    As constraints, we can set not only classes but interfaces, too. Do not try to extend one generic class from another (like 
+   <code class="language-kotlin">Storage&lt;Magazine&gt; : Storage&lt;Book&gt;</code>) — it will lead to an error.
+  </div>
+  <p></p> 
+  <h5>Usage with functions</h5> 
+  <p>Type bounds can be used with generic functions, too. The principle of usage with functions is the same as with classes.</p> 
+  <pre><code class="language-kotlin">fun &lt;T : Book&gt; sortByDate(list: List&lt;T&gt;) { ... }</code></pre> 
+  <p>This function takes <code class="language-kotlin">List&lt;T&gt;</code> as an argument type. The type <code class="language-kotlin">Book</code> is specified after a colon: it's the upper bound. It means that only a type that extends <code class="language-kotlin">Book</code> can be substituted for <code class="language-kotlin">T</code>. Imagine that we have two lists: the first one is named <code class="language-kotlin">listOne</code> and it stores values of the type <code class="language-kotlin">Magazine</code>, which extends <code class="language-kotlin">Book</code>. The second list <code class="language-kotlin">listTwo</code> stores values of the type <code class="language-kotlin">String</code>. </p> 
+  <pre><code class="language-kotlin">/* create instances */
+var listOne: List&lt;Book&gt; = listOf();
+var listTwo: List&lt;Magazine&gt; = listOf();
+
+/* invoke methods */
+sortByDate(listOne) // OK because Magazine is a subtype of Book
+sortByDate(listTwo) // Error: String is not a subtype of Book</code></pre> 
+  <p>As we can see, we have no problems invoking <code class="language-kotlin">sortByDate()</code> with <code class="language-kotlin">listOne</code> as an argument. But we do have problems when we try to pass <code class="language-kotlin">listTwo</code>. <code class="language-kotlin">String</code> is not a subtype of <code class="language-kotlin">Book</code>, and that's why we can't pass <code class="language-kotlin">List&lt;String&gt;</code> to <code class="language-kotlin">sortByDate()</code>.</p> 
+  <h5>Multiple bounds</h5> 
+  <p>Type variables may have multiple bounds, but only one upper bound can be specified inside the angle brackets. If you need multiple type bounds, you need to use the <em>where-</em>clause to separate them. Imagine that we have an interface <code class="language-kotlin">Watchable</code>, which is generic, and we want to pass object realizations of this interface to <code class="language-kotlin">sortByDate</code> (in order to sort films and news by date, for example).</p> 
+  <pre><code class="language-kotlin">fun &lt;T&gt; sortByDate(list: List&lt;T&gt;)
+     where T : Book, T : Watchable&lt;T&gt; {...}</code></pre> 
+  <p>Consider the fact that Kotlin (like Java) does not support multiple inheritance. It means that a class can extend only one class. But there is good news — a class can implement an unlimited number of interfaces!</p> 
+  <p>When you use multiple bounds, the first type should be a class or an interface. The following types must be interfaces.</p> 
+  <h5>Conclusion</h5> 
+  <p>Type bounds are used to restrict type parameters. The most common use of type bounds is setting upper bounds. It may come in handy if you want to limit the types a class can store or a function can take. You can also set multiple bounds, but remember about single inheritance!</p>
+ </body>
+</html>

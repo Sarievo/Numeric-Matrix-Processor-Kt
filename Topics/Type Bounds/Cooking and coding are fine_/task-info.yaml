@@ -1,0 +1,30 @@
+type: code
+custom_name: Cooking and coding are fine!
+files:
+- name: src/Main.kt
+  visible: true
+  text: |-
+    // change the code below
+    class SmartKitchen<T> {
+
+        fun finishCooking() {
+            // finish the method
+        }
+    }
+
+    // don't change it!
+    interface Logger { fun log() }
+    interface Cooker { fun cook() }
+
+    class Microwave: Logger, Cooker {
+        override fun log() = println("Microwave finished cooking!")
+        override fun cook() = println("Microwave is  cooking")
+    }
+    class MultiCooker: Logger, Cooker {
+        override fun log() = println("Multicooker finished cooking!")
+        override fun cook() = println("Multicooker is  cooking")
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/16943#comment
+status: Solved
+record: -1

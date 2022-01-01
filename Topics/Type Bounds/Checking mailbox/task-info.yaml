@@ -1,0 +1,14 @@
+type: code
+files:
+- name: src/Main.kt
+  visible: true
+  text: "// don't change Letter and CherryPie!\nclass Letter \nclass CherryPie \n\n\
+    // correct the code\nclass MailBox<T : CherryPie>(var value: T) {\n\n    fun sendLetter()\
+    \ {\n        println(\"Letter is sent!\")\n    }\n}"
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/16940#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Sat, 01 Jan 2022 10:58:11 UTC
+record: -1

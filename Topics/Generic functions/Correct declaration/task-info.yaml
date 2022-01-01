@@ -1,0 +1,23 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: fun doGeneric(t:&lt;t&gt;):String
+- text: fun &lt;string&gt; doGeneric(t:T)
+- text: 'fun T doGeneric (t:T): String'
+- text: fun doGeneric(t:T):String
+- text: fun &lt;t&gt; doGeneric(t:T):String
+message_correct: Congratulations!
+message_incorrect: Incorrect solution
+files:
+- name: src/Main.kt
+  visible: true
+  text: |
+    // You can experiment here, it won’t be checked
+
+    fun main(args: Array<String>) {
+      // put your code here
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/16055#comment
+status: Solved
+record: -1

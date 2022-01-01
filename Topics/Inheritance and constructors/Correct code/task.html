@@ -1,0 +1,31 @@
+<h2>Correct code</h2>
+<html>
+ <head></head>
+ <body>
+  <p>A class <code class="java">Base</code> is defined as follows:</p> 
+  <pre><code class="language-no-highlight">open class Base(val num: Int, var isZero: Int = 0, val str: String = "Europe") {
+    constructor(num: Int, str: String) : this(num, 0, str)
+}</code></pre> 
+  <p>Find the correct code snippets for defining a class <code class="java">Derived</code>.</p> 
+  <p>a)</p> 
+  <pre><code class="language-no-highlight">class Derived : Base {
+    constructor(num: Int, isZero: Int, str: String) : super(num, isZero, str)
+    constructor(num: Int, str: String) : super(num, str)
+}</code></pre> 
+  <p>b)</p> 
+  <pre><code class="language-no-highlight">class Derived : Base() {
+    constructor(num: Int, isZero: Int, str: String) : super(num, isZero, str)
+    constructor(num: Int, str: String) : super(num, str)
+}</code></pre> 
+  <p>c)</p> 
+  <pre><code class="language-no-highlight">class Derived : Base {
+    constructor(val num: Int, var isZero: Int, val str: String) : super(num, isZero, str)
+    constructor(num: Int, str: String) : super(num, str)
+}</code></pre> 
+  <p>d)</p> 
+  <pre><code class="language-no-highlight">class Derived : Base {
+    constructor(num: Int) : super(num)
+    constructor(num: Int, str: String) : super(num, str)
+}</code></pre>
+ </body>
+</html>

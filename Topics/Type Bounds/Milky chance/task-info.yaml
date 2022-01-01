@@ -1,0 +1,22 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: 'fun &lt;T:Animal&gt; feedWithMilk(animal: Any) { }'
+- text: 'fun &lt;T extends Animal&gt; feedWithAnimal(animal: T) { }'
+- text: ' fun feedWithMilk(animal: Cat) { }'
+- text: 'fun &lt;T : Animal&gt;  feedWithMilk(animal : T) { }'
+message_correct: Congratulations!
+message_incorrect: Incorrect solution
+files:
+- name: src/Main.kt
+  visible: true
+  text: |
+    // You can experiment here, it won’t be checked
+
+    fun main(args: Array<String>) {
+      // put your code here
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/16937#comment
+status: Solved
+record: -1

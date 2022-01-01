@@ -1,0 +1,22 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: Compilation and running successfully
+- text: 'Runtime: java.lang.ClassCastException: Long cannot be cast to String'
+- text: 'Compile-time: The integer literal does not conform to the expected type Long'
+- text: 'Compile-time: The integer literal does not conform to the expected type String'
+message_correct: Congratulations!
+message_incorrect: Incorrect solution
+files:
+- name: src/Main.kt
+  visible: true
+  text: |
+    // You can experiment here, it won’t be checked
+
+    fun main(args: Array<String>) {
+      // put your code here
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/15346#comment
+status: Solved
+record: -1

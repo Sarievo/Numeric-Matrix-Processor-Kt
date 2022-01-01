@@ -1,0 +1,16 @@
+<h2>Reusing code with Object</h2>
+<html>
+ <head></head>
+ <body>
+  <p>Take a look at the following non-generic class:</p> 
+  <pre><code class="language-kotlin">class NonGenericClass(val value: Any) {
+
+    fun get(): Any {
+        return value
+    }
+}</code></pre> 
+  <p>And here is an instance of this class:</p> 
+  <pre><code class="language-kotlin">val instance: NonGenericClass = NonGenericClass("Hello")</code></pre> 
+  <p>Now we want to get the string back. In which case will the code throw a runtime exception?</p>
+ </body>
+</html>
